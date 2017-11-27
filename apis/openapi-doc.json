@@ -1,1 +1,77 @@
-{"info":{"title":"Hotel-2","description":"Example Hotel","version":"1.0.0"},"openapi":"3.0.0"}
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Hotel-2",
+    "description": "Example Hotel",
+    "contact": {
+      "name": "John Wall",
+      "url": "",
+      "email": "wall.jt+api@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/property/{property-id}/description": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {}
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Address": {
+        "required": [
+          "street",
+          "postal-code",
+          "province"
+        ],
+        "properties": {
+          "street": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "postal-code": {
+            "type": "string"
+          },
+          "province": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        }
+      },
+      "property-definition": {
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "physical-address": {}
+        }
+      }
+    }
+  }
+}
