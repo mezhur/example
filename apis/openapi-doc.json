@@ -30,6 +30,19 @@
           }
         }
       }
+    },
+    "/hotel/{name}/address": {
+      "get": {},
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
     }
   },
   "components": {
